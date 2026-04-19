@@ -57,3 +57,10 @@ Once you have SpectroForge installed, you can start designing your spectrograph 
 
 ## Documentation
 For detailed documentation on how to use SpectroForge, please refer to the [User Guide](https://sunipkm.github.io/SpectroForge/).
+
+## License
+SpectroForge is licensed under the SpectroForge Software License. Please see the [LICENSE](LICENSE) file for more details.
+
+> [!IMPORTANT]
+> ⚠️ Disclaimer
+> **This software is provided "AS IS" without any warranty of any kind.** The software does not come with any guarantees regarding functionality, reliability, or fitness for any particular purpose. Installation and use of this software is at the user's own risk. The author is not responsible for any damage, data loss, or other consequences that may result from the installation or use of this software.
