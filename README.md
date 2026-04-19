@@ -29,7 +29,7 @@ To install SpectroForge, follow these steps:
 1. Launch a terminal and navigate to the directory where you downloaded the .deb file.
 2. Install the package using the following command:
 ```bash
-sudo dpkg -i spectroforge-<version>.deb
+sudo dpkg -i SpectroForge-<version>.deb
 ```
 3. If there are any dependency issues, run:
 ```bash
@@ -41,14 +41,14 @@ sudo apt-get install -f
 spectroforge
 ```
 #### Other Linux Distributions
-1. Download the `spectroforge-<version>.AppImage` file.
+1. Download the `SpectroForge-<version>.AppImage` file.
 2. Make the AppImage executable by running the following command in the terminal:
 ```bash
-chmod +x spectroforge-<version>.AppImage
+chmod +x SpectroForge-<version>.AppImage
 ```
 3. Run the AppImage using the following command:
 ```bash
-./spectroforge-<version>.AppImage
+./SpectroForge-<version>.AppImage
 ```
 4. You can also create a desktop shortcut for easier access.
 
