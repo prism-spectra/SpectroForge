@@ -1,5 +1,7 @@
 # SpectroForge: The Spectrograph Designer
 
+[![DOI](https://zenodo.org/badge/1210953724.svg)](https://zenodo.org/badge/latestdoi/1210953724)
+
 SpectroForge aids in design and optimization of single-grating spectrographs.
 It provides a user-friendly interface to explore various configurations and parameters, enabling users to visualize and analyze the performance of their spectrograph designs.
 
@@ -64,3 +66,27 @@ SpectroForge is licensed under the SpectroForge Software License. Please see the
 > [!IMPORTANT]
 > ⚠️ Disclaimer
 > **This software is provided "AS IS" without any warranty of any kind.** The software does not come with any guarantees regarding functionality, reliability, or fitness for any particular purpose. Installation and use of this software is at the user's own risk. The author is not responsible for any damage, data loss, or other consequences that may result from the installation or use of this software.
+
+## Citation
+
+If you use SpectroForge to design an instrument, please cite the use of the tool:
+
+```bibtex
+@software{spectroforge_mukherjee_2026,
+  author       = {Sunip Mukherjee},
+  title        = {prism-spectra/SpectroForge: v0.0.3},
+  month        = may,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v0.0.2},
+  doi          = {10.5281/zenodo.20469410},
+  url          = {https://doi.org/10.5281/zenodo.20469410},
+  swhid        = {swh:1:dir:86074949b31981cbf7778a0ad77bcd7e11d07dd2
+                   ;origin=https://doi.org/10.5281/zenodo.20469409;vi
+                   sit=swh:1:snp:6c295f2f9cd0f241c79a47a71aae8d048a69
+                   cf05;anchor=swh:1:rel:7f0f573bfa7d85af2f43a86f1491
+                   fcefb411bc63;path=prism-spectra-SpectroForge-
+                   bc2e455
+                  },
+}
+```
