@@ -1,0 +1,52 @@
+.screenshot-frame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid var(--border-color, #d0d7de);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  background: #000;
+}
+
+.screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  transition: opacity 0.2s ease;
+}
+
+.screenshot-frame img.sf-hidden {
+  display: none;
+}
+
+.screenshot-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-family: inherit;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  transition: background 0.15s ease;
+}
+
+.screenshot-toggle:hover {
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.screenshot-toggle .sf-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
