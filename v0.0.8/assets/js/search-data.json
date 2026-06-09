@@ -1,0 +1,709 @@
+{"0": {
+    "doc": "3-D Layout",
+    "title": "3-D Layout",
+    "content": "The 3-D Layout view renders a WebGL mechanical model of the entire spectrograph optical train — collimator, grating, focusing lens, and slit plane — so you can verify physical geometry and component clearances. ",
+    "url": "/SpectroForge/v0.0.8/ui/3d-layout/",
+    
+    "relUrl": "/ui/3d-layout/"
+  },"1": {
+    "doc": "3-D Layout",
+    "title": "Table of contents",
+    "content": ". | Controls Toolbar | Camera Navigation | 3-D Mechanical Settings Panel . | Optical Component Sizes | Slit plane geometry | Visualization options | Actions | . | . ",
+    "url": "/SpectroForge/v0.0.8/ui/3d-layout/#table-of-contents",
+    
+    "relUrl": "/ui/3d-layout/#table-of-contents"
+  },"2": {
+    "doc": "3-D Layout",
+    "title": "Controls Toolbar",
+    "content": "The toolbar appears at the top of the 3-D canvas when this view is active. | Button | Action | . | ⚙ Settings | Open the 3-D Mechanical Settings panel | . | Save PNG | Export the current 3-D view as a PNG image | . ",
+    "url": "/SpectroForge/v0.0.8/ui/3d-layout/#controls-toolbar",
+    
+    "relUrl": "/ui/3d-layout/#controls-toolbar"
+  },"3": {
+    "doc": "3-D Layout",
+    "title": "Camera Navigation",
+    "content": "| Input | Effect | . | Click + drag | Rotate (yaw / pitch orbit) | . | Scroll | Zoom in / out | . | Click a cube face label | Snap to that axis-aligned view with smooth animation | . The orientation cube in the corner shows FRONT, BACK, TOP, BOTTOM, RIGHT, and LEFT faces. Clicking a label snaps the camera to look at the model from that direction. ",
+    "url": "/SpectroForge/v0.0.8/ui/3d-layout/#camera-navigation",
+    
+    "relUrl": "/ui/3d-layout/#camera-navigation"
+  },"4": {
+    "doc": "3-D Layout",
+    "title": "3-D Mechanical Settings Panel",
+    "content": "Opened with ⚙ Settings. Draggable floating window. Optical Component Sizes . | Parameter | Unit | Description | . | Collimating lens diameter | mm | Clear aperture of the collimating lens | . | Focusing lens diameter | mm | Clear aperture of the focusing/camera lens | . | Grating width | mm | Horizontal extent of the diffraction grating | . | Grating height | mm | Vertical extent of the grating | . | Grating thickness | mm | Physical depth of the grating substrate | . Slit plane geometry . | Parameter | Unit | Description | . | X position | mm | Lateral offset of the slit plane | . | Y position | mm | Vertical offset of the slit plane | . | Width | mm | Total width of the slit plane | . | Height | mm | Total height of the slit plane | . Visualization options . | Control | Description | . | Ray opacity | Slider (0 – 100 %). Reduce to see through ray bundles | . | Grid at grating base | Toggle a reference grid beneath the grating | . | Orthographic projection | Switch between perspective and orthographic camera | . Actions . | Button | Description | . | Render 3D | Compute and display the 3-D model (enabled once required fields are filled) | . | Reset View | Return the camera to the default perspective | . ",
+    "url": "/SpectroForge/v0.0.8/ui/3d-layout/#3-d-mechanical-settings-panel",
+    
+    "relUrl": "/ui/3d-layout/#3-d-mechanical-settings-panel"
+  },"5": {
+    "doc": "Conventions",
+    "title": "Conventions",
+    "content": "This page defines the coordinate system, units, and sign conventions used throughout the app. Understanding these conventions is essential for correctly interpreting and configuring the instrument parameters. ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/",
+    
+    "relUrl": "/configuration/conventions/"
+  },"6": {
+    "doc": "Conventions",
+    "title": "Table of contents",
+    "content": ". | Coordinate System | Optic Axes . | Collimator Arm | Focusing Arm | . | Slit Plane and Slits | Focal Plane | Angle Conventions | Units | Grating Rotation | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#table-of-contents",
+    
+    "relUrl": "/configuration/conventions/#table-of-contents"
+  },"7": {
+    "doc": "Conventions",
+    "title": "Coordinate System",
+    "content": "PrISM uses a right-handed, Cartesian coordinate system. An origin is defined at the center of the grating, with axes oriented as follows: . | Y axis: Parallel to the rulings on the grating, positive direction is “up” when facing the grating. | X axis: Perpendicular to the rulings, positive direction is “right” when facing the grating. | Z axis: Along the optical axis, positive direction is “away from the grating”. | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#coordinate-system",
+    
+    "relUrl": "/configuration/conventions/#coordinate-system"
+  },"8": {
+    "doc": "Conventions",
+    "title": "Optic Axes",
+    "content": "Two optical axes are defined, as shown in the diagram below: . Collimator Arm . The collimator arm ($\\overrightarrow{OZ}$) is the axis along which the collimating optics are positioned. Slits are defined on the slit plane, which is perpendicular to the collimator arm and located at a focal plane. Diverging rays from the slit plane are collimated by the collimator and directed towards the grating. PrISM assumes a paraxial collimating lens, at some distance from the slit plane and the grating. The collimating lens may be offset from the $\\overrightarrow{OZ}$ axis in both $X$ and $Y$, and may be rotated in-plane (around the local $Y$ axis). Focusing Arm . The focusing arm ($\\overrightarrow{OZ’}$) is the axis along which the focusing optics, and the focal plane, are positioned. The focusing arm is defined relative to the collimator arm, with the focal plane located perpendicular to it. The focusing arm is always on the $XZ$ plane. PrISM assumes a paraxial focusing lens, at some distance from the grating and the focal plane. The focusing lens may be offset from the $\\overrightarrow{OZ’}$ axis in both $X’$ and $Y’$, and may be rotated in-plane (around the local $Y’$ axis). ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#optic-axes",
+    
+    "relUrl": "/configuration/conventions/#optic-axes"
+  },"9": {
+    "doc": "Conventions",
+    "title": "Slit Plane and Slits",
+    "content": "The slits are defined on the slit plane, which is perpendicular to the collimator arm ($\\overrightarrow{OZ}$) and located at a focal plane. Slits on the slit plane are defined by their center positions, widths and heights in the $X$ and $Y$ directions, respectively. ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#slit-plane-and-slits",
+    
+    "relUrl": "/configuration/conventions/#slit-plane-and-slits"
+  },"10": {
+    "doc": "Conventions",
+    "title": "Focal Plane",
+    "content": "The focal plane is always centered on the $\\overrightarrow{OZ’}$ axis in the $X’$ direction, but may be offset in the $Y’$ direction. ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#focal-plane",
+    
+    "relUrl": "/configuration/conventions/#focal-plane"
+  },"11": {
+    "doc": "Conventions",
+    "title": "Angle Conventions",
+    "content": "Rotation parameters for the collimator and focusing lens follow the right-hand rule: positive rotation is clockwise when looking along the positive $Z$ or $Z’$ axis towards the grating. ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#angle-conventions",
+    
+    "relUrl": "/configuration/conventions/#angle-conventions"
+  },"12": {
+    "doc": "Conventions",
+    "title": "Units",
+    "content": ". | All linear dimensions (e.g., slit widths, focal lengths, offsets) are in millimeters (mm). | Grating groove density is in lines per millimeter (lines mm⁻¹). | Rotation angles are in degrees (°). | Wavelengths are in Angstroms (Å). Only the straightened images use nanometers (nm). | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#units",
+    
+    "relUrl": "/configuration/conventions/#units"
+  },"13": {
+    "doc": "Conventions",
+    "title": "Grating Rotation",
+    "content": ". | Gamma (γ) offset: A positive γ offset corresponds to a counter-clockwise rotation of the grating around the $X$ axis, which causes the diffracted light to shift upwards on the focal plane (towards positive $Y’$). A negative γ offset causes a downward shift. | Alpha (α) offset: A positive α offset corresponds to a counter-clockwise rotation of the grating around the $Y$ axis, which causes the diffracted light to shift towards the $+X’$ direction on the focal plane. A negative α offset causes a shift towards the $-X’$ direction. | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/conventions/#grating-rotation",
+    
+    "relUrl": "/configuration/conventions/#grating-rotation"
+  },"14": {
+    "doc": "Exporting",
+    "title": "Exporting",
+    "content": "SpectroForge can produce several types of output files. ",
+    "url": "/SpectroForge/v0.0.8/exporting/",
+    
+    "relUrl": "/exporting/"
+  },"15": {
+    "doc": "Exporting",
+    "title": "Table of contents",
+    "content": ". | Instrument TOML | PDF Figure . | PDF Options | . | Mosaic SVG | Straightener Blob . | Straightener Pipeline | . | 3-D PNG Snapshot | Quick-reference Table | . ",
+    "url": "/SpectroForge/v0.0.8/exporting/#table-of-contents",
+    
+    "relUrl": "/exporting/#table-of-contents"
+  },"16": {
+    "doc": "Exporting",
+    "title": "Instrument TOML",
+    "content": "A complete snapshot of the instrument configuration — every parameter, slit, window, and feature — saved as a human-readable TOML file. Save: ≡ → Instrument Load / Store → Export . Load: ≡ → Instrument Load / Store → Load . TOML files are the recommended way to version-control instrument configurations and share designs between collaborators. ",
+    "url": "/SpectroForge/v0.0.8/exporting/#instrument-toml",
+    
+    "relUrl": "/exporting/#instrument-toml"
+  },"17": {
+    "doc": "Exporting",
+    "title": "PDF Figure",
+    "content": "A publication-quality PDF of the focal-plane layout plot. Open: ≡ → Export PDF . PDF Options . | Option | Range | Default | Description | . | Width | 1 – 30 in | 6.4 in | Page / figure width | . | Height | 1 – 30 in | 4.8 in | Page / figure height | . | DPI | 72 – 600 | 300 | Raster resolution | . | Label font size | 4 – 24 pt | 8 pt | Font size for axis labels and annotations | . | Line width | 0.1 – 10 | 0.9 | Stroke width for spectral line segments | . | Show windows | checkbox | on | Include mosaic window outlines | . | Show lines | checkbox | on | Include computed spectral segments | . Click Export PDF to download the file. ",
+    "url": "/SpectroForge/v0.0.8/exporting/#pdf-figure",
+    
+    "relUrl": "/exporting/#pdf-figure"
+  },"18": {
+    "doc": "Exporting",
+    "title": "Mosaic SVG",
+    "content": "A scaled vector drawing of the mosaic layout, suitable for machining drawings. Export: Open the Windows editor → click Download Mosaic SVG . The SVG contains each window as a labelled rectangle with accurate physical dimensions in mm. ",
+    "url": "/SpectroForge/v0.0.8/exporting/#mosaic-svg",
+    
+    "relUrl": "/exporting/#mosaic-svg"
+  },"19": {
+    "doc": "Exporting",
+    "title": "Straightener Blob",
+    "content": "The straightening curve map computed in the Straighten view can be saved for later reuse. Export: Straighten view → Export Straightener → saves a .bin file . Load: Straighten view → Load Straightener . Loading a previously saved archive applies the same straightening to a new image without re-running the calibration. Straightener Pipeline . The straightener blob can be used in the prism-imageproc package to apply the same straightening to images. prism-imageproc is an open-source Python library that can be integrated into user’s custom data reduction pipelines. ",
+    "url": "/SpectroForge/v0.0.8/exporting/#straightener-blob",
+    
+    "relUrl": "/exporting/#straightener-blob"
+  },"20": {
+    "doc": "Exporting",
+    "title": "3-D PNG Snapshot",
+    "content": "A raster snapshot of the current 3-D view. Export: 3-D Layout view toolbar → Save PNG . The image is downloaded at the current canvas resolution. ",
+    "url": "/SpectroForge/v0.0.8/exporting/#3-d-png-snapshot",
+    
+    "relUrl": "/exporting/#3-d-png-snapshot"
+  },"21": {
+    "doc": "Exporting",
+    "title": "Quick-reference Table",
+    "content": "| Output | Format | Where | . | Instrument config | .toml | ≡ → Export | . | Focal-plane figure | .pdf | ≡ → Export PDF | . | Detector window layout | .svg | Windows editor → Download Mosaic SVG | . | Straightening map | .bin | Straighten view → Export Straightener | . | 3-D view | .png | 3-D Layout toolbar → Save PNG | . ",
+    "url": "/SpectroForge/v0.0.8/exporting/#quick-reference-table",
+    
+    "relUrl": "/exporting/#quick-reference-table"
+  },"22": {
+    "doc": "Getting Started",
+    "title": "Getting Started",
+    "content": " ",
+    "url": "/SpectroForge/v0.0.8/getting-started/",
+    
+    "relUrl": "/getting-started/"
+  },"23": {
+    "doc": "Getting Started",
+    "title": "Table of contents",
+    "content": ". | Installation . | macOS | Windows | Linux (AppImage) | Linux (deb) | . | First launch . | Load an example instrument | Start from scratch | . | Interface overview | Render modes | . ",
+    "url": "/SpectroForge/v0.0.8/getting-started/#table-of-contents",
+    
+    "relUrl": "/getting-started/#table-of-contents"
+  },"24": {
+    "doc": "Getting Started",
+    "title": "Installation",
+    "content": "Download the latest release for your platform from the Releases page. | Platform | File | . | macOS | SpectroForge-&lt;version&gt;-mac-&lt;arch&gt;.dmg | . | Windows (x64) | SpectroForge-Win-x64-&lt;version&gt;.zip | . | Windows (ARM64) | SpectroForge-Win-arm64-&lt;version&gt;.zip | . | Linux (AppImage) | SpectroForge-&lt;version&gt;-linux-x64.AppImage | . | Linux (Debian/Ubuntu x64) | SpectroForge-&lt;version&gt;-linux-x64.deb | . | Linux (Debian/Ubuntu ARM64) | SpectroForge-&lt;version&gt;-linux-arm64.deb | . macOS . | Open the .dmg and drag SpectroForge to your Applications folder. | On first launch, macOS Gatekeeper may block the app — right-click → Open to bypass. | . Windows . | Download and extract SpectroForge-Win-&lt;arch&gt;-&lt;version&gt;.zip. | Run the SpectroForge-Setup-&lt;version&gt;.exe installer inside and follow the prompts. | . Linux (AppImage) . chmod +x SpectroForge-*.AppImage ./SpectroForge-*.AppImage . Linux (deb) . sudo dpkg -i SpectroForge-*.deb . ",
+    "url": "/SpectroForge/v0.0.8/getting-started/#installation",
+    
+    "relUrl": "/getting-started/#installation"
+  },"25": {
+    "doc": "Getting Started",
+    "title": "First launch",
+    "content": "When SpectroForge opens, the browser-based UI loads automatically. You will see: . | A view ribbon across the top for switching between modes. | A central plot panel (initially empty). | A right-hand control sidebar with collapsible parameter sections. | A status bar at the bottom. | . Load an example instrument . | Click the ≡ (menu) button in the top-right corner of the view ribbon. | Under Instrument Load / Store, click Load. | Select one of the bundled .toml example files (e.g. HiTMIS-A 2021-instrument.toml). | The layout renders automatically — spectral lines appear in the plot. | . Start from scratch . Fill in the Instrument &amp; Grating, Collimator, and Focusing Lens sections in the sidebar, then add at least one Slit. ",
+    "url": "/SpectroForge/v0.0.8/getting-started/#first-launch",
+    
+    "relUrl": "/getting-started/#first-launch"
+  },"26": {
+    "doc": "Getting Started",
+    "title": "Interface overview",
+    "content": ". ",
+    "url": "/SpectroForge/v0.0.8/getting-started/#interface-overview",
+    
+    "relUrl": "/getting-started/#interface-overview"
+  },"27": {
+    "doc": "Getting Started",
+    "title": "Render modes",
+    "content": "SpectroForge supports two render policies, selectable in the Mode Summary card at the top of the sidebar. | Mode | Behavior | . | Auto | Re-renders 280 ms after any parameter change. Good for exploration. | . | Manual | Only re-renders when you click Render. Good for batch edits. | . The dirty badge next to the render policy changes from Synced (green) to Unsaved changes (amber) whenever the current parameters differ from the last rendered result. The badge can be clicked to force a re-render immediately if you want to see the effect of your changes without waiting for the debounce timer. ",
+    "url": "/SpectroForge/v0.0.8/getting-started/#render-modes",
+    
+    "relUrl": "/getting-started/#render-modes"
+  },"28": {
+    "doc": "Image Overlay",
+    "title": "Image Overlay",
+    "content": "The Image Overlay section lets you load a reference image — such as a lab flat-field or an on-sky frame — and align it with the computed focal-plane layout. This makes it easy to verify that the optical model matches the real detector geometry. ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/",
+    
+    "relUrl": "/configuration/image-overlay/"
+  },"29": {
+    "doc": "Image Overlay",
+    "title": "Table of contents",
+    "content": ". | Loading an Image | Transform Controls . | Position | Orientation | Reflection | Proxy Size | . | Actions | Workflow Tip | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/#table-of-contents",
+    
+    "relUrl": "/configuration/image-overlay/#table-of-contents"
+  },"30": {
+    "doc": "Image Overlay",
+    "title": "Loading an Image",
+    "content": ". | Expand the Image Overlay section in the sidebar (or scroll down to it). | Click the file input (or drag and drop) to load a PNG or JPEG file. | The status line updates to say Image loaded… X µm/pixel, using the mosaic scale parameter to convert pixel size to physical units. | . The mosaic Scale parameter (µm px⁻¹) in the Mosaic section determines the physical-to-pixel conversion. The alignment process updates this value initially to fill the loaded image inside the mosaic. Modifying the Scale parameter in the Image Overlay section adjusts the mosaic scale. ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/#loading-an-image",
+    
+    "relUrl": "/configuration/image-overlay/#loading-an-image"
+  },"31": {
+    "doc": "Image Overlay",
+    "title": "Transform Controls",
+    "content": "All parameters are applied simultaneously when you click Apply transform. Position . | Parameter | Unit | Description | . | Offset X | mm | Shift the image horizontally in the focal plane | . | Offset Y | mm | Shift the image vertically in the focal plane | . Orientation . | Parameter | Unit | Description | . | Rotation | ° | Rotate the image around its center | . | Scale | × | Uniform scale factor (1.0 = no scaling) | . Reflection . | Option | Effect | . | None | No flip | . | Flip Y | Mirror horizontally (left ↔ right) | . | Flip X | Mirror vertically (top ↔ bottom) | . | Flip both | Rotate 180° (equivalent to flip X + flip Y) | . Proxy Size . The Proxy size (pixels, 128 – 4096) controls the resolution of the image thumbnail sent to the browser for display. A smaller proxy renders faster; a larger proxy reveals more detail. The original image data is not modified. Setting the proxy size to the original image dimensions (or larger) will display the full-resolution image, but may cause slow rendering and increased memory usage in the browser. ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/#transform-controls",
+    
+    "relUrl": "/configuration/image-overlay/#transform-controls"
+  },"32": {
+    "doc": "Image Overlay",
+    "title": "Actions",
+    "content": "| Button | Description | . | Apply transform | Process the image with the current transform values and display it in the plot | . | Reset transform | Revert all transform fields to their defaults (no offset, no rotation, scale = 1, no flip) | . | Remove image | Unload the image and clear it from the plot | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/#actions",
+    
+    "relUrl": "/configuration/image-overlay/#actions"
+  },"33": {
+    "doc": "Image Overlay",
+    "title": "Workflow Tip",
+    "content": "A quick alignment workflow: . | Load the image. | Set Rotation, Offset X / Y and Scale to match the mosaic layout. | Click Apply transform. | Iterate until the mosaic layout aligns with the image. | Adjust instrument parameters (e.g. focal length, detector position) to refine the alignment of spectral lines with those present in the image. | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/image-overlay/#workflow-tip",
+    
+    "relUrl": "/configuration/image-overlay/#workflow-tip"
+  },"34": {
+    "doc": "Configuration",
+    "title": "Configuration",
+    "content": "The right-hand sidebar contains all instrument parameters. Each section is collapsible; click the section header to expand or collapse it. The ↺ button in a section header resets only that section to its default values. A complete instrument configuration can be saved to and loaded from a TOML file via the action menu (≡ → Instrument Load / Store). ",
+    "url": "/SpectroForge/v0.0.8/configuration/",
+    
+    "relUrl": "/configuration/"
+  },"35": {
+    "doc": "Configuration",
+    "title": "Sections",
+    "content": "| Section | Purpose | . | Conventions | Coordinate system, units, and sign conventions used throughout the app | . | Instrument &amp; Grating | Name, grating groove density, collimator, focusing lens, and mosaic detector | . | Slits &amp; Windows | Slit positions/sizes and mosaic filter windows | . | Spectral Features | Emission/absorption line annotations | . | Input Spectra | Built-in and custom spectra sources, mixing, and wavelength ranges | . | Image Overlay | Load and align a reference detector image | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/#sections",
+    
+    "relUrl": "/configuration/#sections"
+  },"36": {
+    "doc": "User Interface",
+    "title": "User Interface",
+    "content": "SpectroForge is organized into four views, selectable from the ribbon across the top of the window. Each view focuses on a different aspect of the instrument design workflow. | View | Purpose | . | Layout | Core 2-D spectral design and parameter tuning | . | Mosaic Map | All slit × diffraction-order combinations | . | Straighten | Correct curved lines in a real detector image | . | 3-D Layout | Mechanical preview of the optical train | . ",
+    "url": "/SpectroForge/v0.0.8/ui/",
+    
+    "relUrl": "/ui/"
+  },"37": {
+    "doc": "User Interface",
+    "title": "Common UI elements",
+    "content": "View Ribbon . The ribbon is always visible. Click a view name to switch. The ≡ button opens the floating action menu. Action Menu . The collapsing menu (opened with ≡) provides: . | Instrument Load / Store — load or export a .toml configuration file. | Export PDF — configure and download a publication-quality figure. | UI — reset defaults, toggle the status bar, jump to a sidebar section, expand/collapse all sections. | . The menu bubble can be dragged anywhere on screen and snapped to any corner. Status Bar . The bottom bar shows: . | Zone | Content | . | Left | Status badge: Ready, Rendering…, or Error | . | Centre | Server RSS memory usage | . | Right | Theme selector and render timing breakdown | . The status bar can be hidden via ≡ → UI → Toggle status bar to maximize the plot area. Collapsible control sections . Every section in the right control panel has a ▸/▾ toggle in its header. Click the header to expand or collapse. The ↺ button beside the title resets that section to its default values. ",
+    "url": "/SpectroForge/v0.0.8/ui/#common-ui-elements",
+    
+    "relUrl": "/ui/#common-ui-elements"
+  },"38": {
+    "doc": "Home",
+    "title": "SpectroForge",
+    "content": "A desktop application for designing, simulating, and analysing multi-slit imaging spectrographs. Get Started View on GitHub . ",
+    "url": "/SpectroForge/v0.0.8/#spectroforge",
+    
+    "relUrl": "/#spectroforge"
+  },"39": {
+    "doc": "Home",
+    "title": "What SpectroForge does",
+    "content": "SpectroForge combines a paraxial ray-trace calculator, called PrISM (Prescription-driven Instrument &amp; Spectrograph Model), with an interactive UI. Given a grating, collimator, and focusing lens, it computes where every diffraction order from every slit lands on the detector — in real time as you adjust parameters. | Capability | Description | . | Layout view | Interactive 2-D spectral layout, with optional image overlay | . | Mosaic map | All slit × order combinations at a glance | . | Straighten | Correct curved spectral lines from a real image | . | 3-D layout | WebGL mechanical preview of the full optical train | . | TOML config | Save and load complete instrument definitions | . | PDF / SVG export | Publication-ready figures / dimensional drawings | . ",
+    "url": "/SpectroForge/v0.0.8/#what-spectroforge-does",
+    
+    "relUrl": "/#what-spectroforge-does"
+  },"40": {
+    "doc": "Home",
+    "title": "Documentation structure",
+    "content": ". | Getting Started — install and launch | User Interface — views, panels, controls . | Layout View | Mosaic Map | Straighten | 3-D Layout | . | Configuration — instrument parameters . | Conventions | Instrument &amp; Grating | Slits &amp; Windows | Spectral Features | Input Spectra | Image Overlay | . | Exporting | Keyboard Shortcuts | . ",
+    "url": "/SpectroForge/v0.0.8/#documentation-structure",
+    
+    "relUrl": "/#documentation-structure"
+  },"41": {
+    "doc": "Home",
+    "title": "Home",
+    "content": ". ",
+    "url": "/SpectroForge/v0.0.8/",
+    
+    "relUrl": "/"
+  },"42": {
+    "doc": "Input Spectra",
+    "title": "Input Spectra",
+    "content": "The Spectra editor defines the spectral energy distribution that is projected through the instrument when Spectra mode is enabled in the Layout view. You can mix built-in day and night spectra, add custom spectra files, restrict each source to wavelength sub-ranges, and inspect the combined result. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/",
+    
+    "relUrl": "/configuration/input-spectra/"
+  },"43": {
+    "doc": "Input Spectra",
+    "title": "Table of contents",
+    "content": ". | Opening the Editor | Default Spectra Rows | Adding Spectra | Supported File Formats . | CSV / TXT format | NetCDF format | . | Table Columns | Wavelength Range Syntax | Combined Spectra Plot | Tips | References | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#table-of-contents",
+    
+    "relUrl": "/configuration/input-spectra/#table-of-contents"
+  },"44": {
+    "doc": "Input Spectra",
+    "title": "Opening the Editor",
+    "content": "Click the Spectra chip below the mode summary card in the Layout view. The editor opens as a draggable floating window. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#opening-the-editor",
+    
+    "relUrl": "/configuration/input-spectra/#opening-the-editor"
+  },"45": {
+    "doc": "Input Spectra",
+    "title": "Default Spectra Rows",
+    "content": "Every session starts with two built-in rows: . | Row | Default range | Default mixing factor | . | Day spectra | (4000:8000) Å | 1.0 | . | Night spectra | (4000:8000) Å | 0.0 | . These built-in rows cannot be removed. They provide a quick way to switch between daylight and night-sky simulations, or blend the two. The built-in Day spectra reference is based on the solar irradiance compilation by Chance and Kurucz (2010). The built-in Night spectra reference is derived from the ESO UVES sky background spectrum resource. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#default-spectra-rows",
+    
+    "relUrl": "/configuration/input-spectra/#default-spectra-rows"
+  },"46": {
+    "doc": "Input Spectra",
+    "title": "Adding Spectra",
+    "content": "Use the Source selector in the editor header, then click Add spectra. | Source | Result | . | Day spectra | Adds another built-in daytime spectrum row | . | Night spectra | Adds another built-in night-sky spectrum row | . | Custom | Opens a file picker to upload a spectra file | . Custom uploads are stored in the active browser session and can be removed from the table. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#adding-spectra",
+    
+    "relUrl": "/configuration/input-spectra/#adding-spectra"
+  },"47": {
+    "doc": "Input Spectra",
+    "title": "Supported File Formats",
+    "content": "Custom spectra files can be uploaded as: . | CSV or TXT | NetCDF (.nc) | . CSV / TXT format . Text-based spectra files should contain at least two valid rows with: . &lt;wavelength_nm&gt; &lt;flux_W_m^-2_nm^-1&gt; . Notes: . | Values may be separated by spaces or commas. | Blank lines and lines starting with # are ignored. | Non-numeric header lines are tolerated before the first numeric row. | Wavelengths are sorted automatically, but must be strictly increasing after sorting. | . NetCDF format . NetCDF uploads must contain: . | a 1-D wavelength coordinate or variable, commonly named wavelength, lambda, or wl | a 1-D irradiance-like data variable, commonly named irradiance, intensity, flux, or value | . If units are present, they are converted to: . | wavelength in nm | irradiance in W m-2 nm-1 | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#supported-file-formats",
+    
+    "relUrl": "/configuration/input-spectra/#supported-file-formats"
+  },"48": {
+    "doc": "Input Spectra",
+    "title": "Table Columns",
+    "content": "| Column | Description | . | Spectra name | Label for the source row (read-only for default rows) | . | Wavelength range (Å) | One or more active wavelength windows in Å | . | Mixing factor | Scalar multiplier applied before the EQ’ed row is added to the combined spectrum | . | EQ | Variable gain (0–1) over the selected wavelength range | . Rows with a mixing factor of 0 contribute nothing to the final combined spectrum. The mixing is performed following the equation . \\[I_\\text{eff}(\\lambda) = \\sum_n s_n \\, G_n(\\lambda) \\, I_n(\\lambda),\\] where $I_n(\\lambda)$ is the $n$th irradiance spectra, $G_n(\\lambda) \\in [0, 1]$ is the wavelength-dependent gain factor, and $s_n$ is the scalar combination factor. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#table-columns",
+    
+    "relUrl": "/configuration/input-spectra/#table-columns"
+  },"49": {
+    "doc": "Input Spectra",
+    "title": "Wavelength Range Syntax",
+    "content": "The Wavelength range (Å) field accepts one or more comma-separated ranges in angstrom: . 4000:5000 (4000:5000) (4000:5000), (6500:6600) . Rules: . | Each range uses low:high. | Parentheses are optional, except when multiple ranges are chained. | If low &gt; high, the values are swapped automatically. | If the field is left blank, the full wavelength span of that source is used. | . Only the selected ranges are interpolated into the common combined spectra grid. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#wavelength-range-syntax",
+    
+    "relUrl": "/configuration/input-spectra/#wavelength-range-syntax"
+  },"50": {
+    "doc": "Input Spectra",
+    "title": "Combined Spectra Plot",
+    "content": "Click Plot combined in the Spectra editor to open a second pop-out window that shows the current mixed spectrum. This plot: . | combines all active rows using their wavelength ranges and mixing factors | resamples them onto a common wavelength grid | supports zooming and panning | can be refreshed manually with Refresh | limits rendering density with the Max points control | . The plot follows the current light or dark UI theme. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#combined-spectra-plot",
+    
+    "relUrl": "/configuration/input-spectra/#combined-spectra-plot"
+  },"51": {
+    "doc": "Input Spectra",
+    "title": "Tips",
+    "content": "Use a mixing factor of 1 for the dominant source and fractional values such as 0.1 or 0.25 for weaker additive components. Create multiple rows from the same built-in source with different wavelength ranges if you want to weight different spectral regions independently. Keep custom spectra files in nanometers and W m^-2 nm^-1 to avoid ambiguity when validating input data. ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#tips",
+    
+    "relUrl": "/configuration/input-spectra/#tips"
+  },"52": {
+    "doc": "Input Spectra",
+    "title": "References",
+    "content": ". | Chance, K., and Kurucz, R. L. (2010). An improved high-resolution solar reference spectrum for Earth’s atmosphere measurements in the ultraviolet, visible, and near infrared. Journal of Quantitative Spectroscopy and Radiative Transfer, 111(9), 1289-1295. DOI: 10.1016/j.jqsrt.2010.01.036 | European Southern Observatory (ESO). UVES Pipeline Sky Spectrum. Retrieved from https://www.eso.org/observing/dfo/quality/UVES/pipeline/sky_spectrum.html | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/input-spectra/#references",
+    
+    "relUrl": "/configuration/input-spectra/#references"
+  },"53": {
+    "doc": "Instrument & Grating",
+    "title": "Instrument &amp; Grating",
+    "content": "These sections define the core optical components of the spectrograph. ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#instrument--grating",
+    
+    "relUrl": "/configuration/instrument/#instrument--grating"
+  },"54": {
+    "doc": "Instrument & Grating",
+    "title": "Table of contents",
+    "content": ". | Instrument | Collimator | Focusing Lens | Mosaic | Grating Rotation | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#table-of-contents",
+    
+    "relUrl": "/configuration/instrument/#table-of-contents"
+  },"55": {
+    "doc": "Instrument & Grating",
+    "title": "Instrument",
+    "content": "| Parameter | Description | . | Name | A human-readable label saved in the TOML file | . | Grating groove density | Ruling density of the diffraction grating (lines mm⁻¹) | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#instrument",
+    
+    "relUrl": "/configuration/instrument/#instrument"
+  },"56": {
+    "doc": "Instrument & Grating",
+    "title": "Collimator",
+    "content": "| Parameter | Unit | Description | . | Focal length | mm | Effective focal length of the collimating optic | . | X offset | mm | Lateral displacement from the optical axis | . | Y offset | mm | Vertical displacement from the optical axis | . | Rotation | ° | In-plane rotation of the collimator | . | Distance to grating | mm | Physical separation between the collimator rear principal plane and the grating | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#collimator",
+    
+    "relUrl": "/configuration/instrument/#collimator"
+  },"57": {
+    "doc": "Instrument & Grating",
+    "title": "Focusing Lens",
+    "content": "| Parameter | Unit | Description | . | Double Pass | toggle | Enable double-pass mode (light reflects back through the focusing lens) | . | Focal length | mm | Effective focal length of the camera/focusing optic | . | X offset | mm | Lateral displacement from the optical axis | . | Y offset | mm | Vertical displacement from the optical axis | . | Rotation | ° | In-plane rotation of the focusing lens | . | Distance | mm | Distance from the grating to the focusing lens | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#focusing-lens",
+    
+    "relUrl": "/configuration/instrument/#focusing-lens"
+  },"58": {
+    "doc": "Instrument & Grating",
+    "title": "Mosaic",
+    "content": "Defines the overall extent of the detector mosaic that receives focused light. | Parameter | Unit | Description | . | Center X | ° | Angular center of the mosaic along the dispersion axis | . | Center Y | mm | Physical center of the mosaic along the spatial axis | . | Width | mm | Total detector width | . | Height | mm | Total detector height | . | Scale | µm px⁻¹ | Detector pixel size | . | Enabled | toggle | Include the mosaic outline in the focal-plane plot | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#mosaic",
+    
+    "relUrl": "/configuration/instrument/#mosaic"
+  },"59": {
+    "doc": "Instrument & Grating",
+    "title": "Grating Rotation",
+    "content": "See Layout View → Grating Rotation for full details. | Parameter | Range | Description | . | α offset | 0 – 90° | In-plane grating tilt | . | γ offset | −30 – +30° | Out-of-plane conical diffraction angle | . | Angular grid samples | 51 – 801 | Segment resolution | . | Angular step | 0.001 – 10° | Step size for angle sweep | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/#grating-rotation",
+    
+    "relUrl": "/configuration/instrument/#grating-rotation"
+  },"60": {
+    "doc": "Instrument & Grating",
+    "title": "Instrument & Grating",
+    "content": " ",
+    "url": "/SpectroForge/v0.0.8/configuration/instrument/",
+    
+    "relUrl": "/configuration/instrument/"
+  },"61": {
+    "doc": "Keyboard Shortcuts",
+    "title": "Keyboard Shortcuts",
+    "content": " ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/",
+    
+    "relUrl": "/keyboard-shortcuts/"
+  },"62": {
+    "doc": "Keyboard Shortcuts",
+    "title": "Global",
+    "content": "| Key | Action | . | Enter | In any text or number field: confirm the value, trigger a render (Auto mode), and move focus away | . | Escape | Close the error dialog or the topmost open pop-out window | . | ← / → | Decrease/increase grating α slider value (layout view) | . | ↑ / ↓ | Increase/decrease grating γ slider value (layout view) | . ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/#global",
+    
+    "relUrl": "/keyboard-shortcuts/#global"
+  },"63": {
+    "doc": "Keyboard Shortcuts",
+    "title": "Plot (Plotly.js)",
+    "content": "| Key / gesture | Action | . | Click + drag | Pan the plot | . | Scroll | Zoom in / out | . | Double-click | Reset the view to fit all data | . ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/#plot-plotlyjs",
+    
+    "relUrl": "/keyboard-shortcuts/#plot-plotlyjs"
+  },"64": {
+    "doc": "Keyboard Shortcuts",
+    "title": "3-D Canvas",
+    "content": "| Key / gesture | Action | . | Click + drag | Orbit (rotate yaw / pitch) | . | Scroll | Zoom | . | Click a cube face | Snap-animate to that axis-aligned view | . ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/#3-d-canvas",
+    
+    "relUrl": "/keyboard-shortcuts/#3-d-canvas"
+  },"65": {
+    "doc": "Keyboard Shortcuts",
+    "title": "Sliders",
+    "content": "| Key | Action | . | ← / → (when slider focused) | Decrease / increase value by one step | . ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/#sliders",
+    
+    "relUrl": "/keyboard-shortcuts/#sliders"
+  },"66": {
+    "doc": "Keyboard Shortcuts",
+    "title": "Pop-out Windows",
+    "content": "| Key / gesture | Action | . | Drag header | Move the window anywhere on screen | . | Escape | Close the window (docks it back to the sidebar) | . | ✕ button | Same as Escape | . ",
+    "url": "/SpectroForge/v0.0.8/keyboard-shortcuts/#pop-out-windows",
+    
+    "relUrl": "/keyboard-shortcuts/#pop-out-windows"
+  },"67": {
+    "doc": "Layout View",
+    "title": "Layout View",
+    "content": "The Layout view is the primary workspace. It shows how every slit, in every diffraction order, maps onto the detector focal plane — updated in real time as you change parameters. ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/",
+    
+    "relUrl": "/ui/layout-view/"
+  },"68": {
+    "doc": "Layout View",
+    "title": "Table of contents",
+    "content": ". | Central Plot . | Layer Controls | Color Scale | Plot interaction | . | Mode Summary Card | Quick Action Chips . | Slits | Windows | Features | Spectra | Spectra EQ | . | Grating Rotation Section | Computed Line Segments | Spectra Plot | Drag-n-Drop Support | . ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#table-of-contents",
+    
+    "relUrl": "/ui/layout-view/#table-of-contents"
+  },"69": {
+    "doc": "Layout View",
+    "title": "Central Plot",
+    "content": "The large Plotly chart in the center of the screen is the focal-plane map. Each colored line segment represents a range of wavelengths from one slit in one diffraction order. Layer Controls . A collapsible panel sits in the top-left corner of the plot. Use it to show or hide individual rendering layers: . | Layer | Description | . | Heatmap | 2-D intensity map of solar spectrum | . | Lines | Spectral line segments for each slit × order | . | Image | Reference image loaded via Image Overlay | . | Annotations | Wavelength labels from the Spectral Features editor | . Each layer has an opacity slider for blending. Color Scale . | Linear / Log toggle — switch between linear and logarithmic intensity scaling. | Auto button — snap the color range to the data minimum and maximum. | Dual-range slider — manually set the minimum and maximum of the color scale. | . Plot interaction . | Action | Effect | . | Click + drag | Pan | . | Scroll | Zoom | . | Double-click | Reset view | . | Hover | Tooltip with wavelength, intensity, and pixel position | . ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#central-plot",
+    
+    "relUrl": "/ui/layout-view/#central-plot"
+  },"70": {
+    "doc": "Layout View",
+    "title": "Mode Summary Card",
+    "content": "Always visible at the top of the sidebar. | Control | Description | . | Spectra toggle | Switch between geometry-only and spectra-mapped colour mode | . | Render policy | Auto (live) or Manual (explicit render button) | . | α / γ display | Current grating rotation angles | . | Dirty badge | Synced or Unsaved changes — click to force re-render | . ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#mode-summary-card",
+    
+    "relUrl": "/ui/layout-view/#mode-summary-card"
+  },"71": {
+    "doc": "Layout View",
+    "title": "Quick Action Chips",
+    "content": "Below the mode summary, four buttons open floating editor windows: . | Slits — define the physical slit positions and sizes. | Windows — define the detector mosaic windows. | Features — annotate spectral emission/absorption lines. | Spectra - select which components are mixed, and to what ratio, for the spectrum run through the instrument. | Spectra Colormap — (visible in spectra mode) choose the colormap for mapped spectra. | . Slits . This control window allows adding and removing entrance slits. Windows . This control window adds or removes filter panels from the focal plane “mosaic”. Features . This control window adds or removes/disables spectral features shown in the line plots. Spectra . This control window adds or removes/disables different spectra (wavelength vs. intensity), and mixes them together: . \\[I(\\lambda) = \\sum_n s_n I_n(\\lambda)\\] Spectra EQ . Each spectra row has an EQ button that opens the per-spectrum equaliser. The EQ editor lets you shape a piecewise-linear gain curve $G(\\lambda) \\in [0, 1]$ that multiplies the raw irradiance before mixing: . \\[I_\\text{eff}(\\lambda) = \\sum_n s_n \\, G_n(\\lambda) \\, I_n(\\lambda)\\] The chart shows three overlaid traces: . | Trace | Axis | Description | . | Raw | Right (norm. flux) | Original normalised irradiance of the spectrum | . | EQ×Raw | Right (norm. flux) | Irradiance after EQ gain is applied | . | EQ curve | Left (EQ gain) | Piecewise-linear gain function | . Control-point interactions: . | Gesture | Effect | . | Click empty area | Add a new control point at that position | . | Drag a point | Move the point (boundary points are gain-only; interior points move freely) | . | Shift+click interior point | Remove the point | . The header toolbar provides additional actions: . | Button | Description | . | Export EQ | Download the current control points as a JSON file | . | Import EQ | Load previously exported control points from a JSON file | . | Export PDF | Save the EQ chart as a PDF | . | Reset EQ | Remove all custom points and revert to flat gain = 1 | . ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#quick-action-chips",
+    
+    "relUrl": "/ui/layout-view/#quick-action-chips"
+  },"72": {
+    "doc": "Layout View",
+    "title": "Grating Rotation Section",
+    "content": "The most frequently used section. Controls the two grating orientation angles and numerical resolution. | Control | Range | Description | . | α offset | 0 – 90° | In-plane grating tilt (sometimes called the blaze angle offset). Drag the slider or type a value. | . | γ offset | −30 – +30° | Out-of-plane grating rotation (conical diffraction angle). | . | Angular grid samples | 51 – 801 | Number of discrete angular positions computed per segment. Higher values are slower. | . | Angular step | 0.001 – 10° | Step size used when sweeping angle during segment tracing. | . | Finer / Coarser | — | Halve or double the angular step with one click. | . The backend internally uses −α. The UI displays the positive convention; the sign flip is applied automatically. ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#grating-rotation-section",
+    
+    "relUrl": "/ui/layout-view/#grating-rotation-section"
+  },"73": {
+    "doc": "Layout View",
+    "title": "Computed Line Segments",
+    "content": "A read-only table at the bottom of the sidebar lists every segment that was calculated in the last render: slit name, diffraction order, wavelength range, and pixel coordinates. It is hidden when the layout has not yet been rendered. ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#computed-line-segments",
+    
+    "relUrl": "/ui/layout-view/#computed-line-segments"
+  },"74": {
+    "doc": "Layout View",
+    "title": "Spectra Plot",
+    "content": "If a spectral window is specified with some wavelength range, enabling “Spectra” will simulate the solar spectra on the focal plane of the instrument. The solar spectra image is rendered below the mosaic windows in layout view. ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#spectra-plot",
+    
+    "relUrl": "/ui/layout-view/#spectra-plot"
+  },"75": {
+    "doc": "Layout View",
+    "title": "Drag-n-Drop Support",
+    "content": "The layout view supports drag-n-drop for loading instrument TOML files and reference images. Try dragging a file from your computer onto the layout view to load it! . ",
+    "url": "/SpectroForge/v0.0.8/ui/layout-view/#drag-n-drop-support",
+    
+    "relUrl": "/ui/layout-view/#drag-n-drop-support"
+  },"76": {
+    "doc": "Mosaic Map",
+    "title": "Mosaic Map",
+    "content": "The Mosaic Map view presents a summary table of every slit × diffraction-order combination and lets you inspect each one individually. ",
+    "url": "/SpectroForge/v0.0.8/ui/mosaic-map/",
+    
+    "relUrl": "/ui/mosaic-map/"
+  },"77": {
+    "doc": "Mosaic Map",
+    "title": "Table of contents",
+    "content": ". | Overview | Controls . | Compute | Metric | Colormap | . | Slit–order table | . ",
+    "url": "/SpectroForge/v0.0.8/ui/mosaic-map/#table-of-contents",
+    
+    "relUrl": "/ui/mosaic-map/#table-of-contents"
+  },"78": {
+    "doc": "Mosaic Map",
+    "title": "Overview",
+    "content": "Switch to this view by clicking Mosaic Map in the view ribbon. The right-hand sidebar is replaced by a dedicated control panel; the central plot shows the selected slit–order pair. ",
+    "url": "/SpectroForge/v0.0.8/ui/mosaic-map/#overview",
+    
+    "relUrl": "/ui/mosaic-map/#overview"
+  },"79": {
+    "doc": "Mosaic Map",
+    "title": "Controls",
+    "content": "Compute . Click Compute to calculate all valid slit × order combinations for the current instrument configuration. This must be run at least once before the table appears. Re-run Compute after changing any instrument parameter to refresh the table. Metric . Choose what quantity to color-code the table: . | Metric | Unit | . | Wavelength | Å | . | Resolution | dimensionless (λ/Δλ) | . Colormap . Select the Plotly colormap used to render the per-combination plot in the central panel. ",
+    "url": "/SpectroForge/v0.0.8/ui/mosaic-map/#controls",
+    
+    "relUrl": "/ui/mosaic-map/#controls"
+  },"80": {
+    "doc": "Mosaic Map",
+    "title": "Slit–order table",
+    "content": "Each row in the table corresponds to one slit in one diffraction order. | Column | Description | . | Slit | Name of the slit | . | Order | Diffraction order integer | . | λ min | Minimum wavelength on the detector (Å) | . | λ max | Maximum wavelength on the detector (Å) | . | λ mean | Mean wavelength (Å) | . | Resolution | Mean spectral resolving power | . | Valid pixels | Number of lit detector pixels | . Click any row to select it. The selected row is highlighted and its 2-D spectral map is rendered in the central plot. ",
+    "url": "/SpectroForge/v0.0.8/ui/mosaic-map/#slitorder-table",
+    
+    "relUrl": "/ui/mosaic-map/#slitorder-table"
+  },"81": {
+    "doc": "Slits & Windows",
+    "title": "Slits &amp; Windows",
+    "content": "Slits define the entrance apertures of the spectrograph. Mosaic windows define sub-regions of the detector that are read out independently (e.g., individual amplifier regions on a large-format CCD). ",
+    "url": "/SpectroForge/v0.0.8/configuration/slits-windows/#slits--windows",
+    
+    "relUrl": "/configuration/slits-windows/#slits--windows"
+  },"82": {
+    "doc": "Slits & Windows",
+    "title": "Table of contents",
+    "content": ". | Slits Editor . | Slit Table Columns | Editing | . | Mosaic Windows Editor . | Window Table Columns | Unit Toggle | Mosaic SVG Export | Editing | Wavelength Range Setting | . | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/slits-windows/#table-of-contents",
+    
+    "relUrl": "/configuration/slits-windows/#table-of-contents"
+  },"83": {
+    "doc": "Slits & Windows",
+    "title": "Slits Editor",
+    "content": "Open with the Slits chip below the mode summary, or via the action menu. The editor appears as a draggable floating window. Slit Table Columns . | Column | Unit | Description | . | Name | — | Unique identifier used in plots and TOML files | . | x | mm | Horizontal center position in the slit plane | . | y | mm | Vertical center position in the slit plane | . | width | mm | Full width of the slit aperture | . | height | mm | Full height of the slit aperture | . | λ range | Å | Wavelength band-pass to render, e.g. 6300:6400 | . Editing . | Click any cell to edit it in place. | Press Enter or click away to confirm. | Click Add slit (header button) to append a new row with default values. | Click the ✕ button on a row to delete that slit. | . Deleting a slit cannot be undone within the session. Export your TOML first if you want a backup. ",
+    "url": "/SpectroForge/v0.0.8/configuration/slits-windows/#slits-editor",
+    
+    "relUrl": "/configuration/slits-windows/#slits-editor"
+  },"84": {
+    "doc": "Slits & Windows",
+    "title": "Mosaic Windows Editor",
+    "content": "Open with the Windows chip. Draggable floating window. Window Table Columns . | Column | Unit | Description | . | Name | — | Unique identifier for the window | . | x | mm or in | Horizontal center of the window on the detector | . | y | mm or in | Vertical center of the window on the detector | . | width | mm or in | Full width of the window | . | height | mm or in | Full height of the window | . | λ range | Å | Wavelength band-pass expected in this window | . Unit Toggle . The mm / in toggle in the window header switches the display unit for all position and size columns simultaneously. The underlying values are stored in mm regardless. Mosaic SVG Export . Click Download Mosaic SVG to export the current window layout as a scaled vector-graphics drawing suitable for machining or PCB documentation. Editing . Same as the Slits editor: click to edit in place, Add window to append, ✕ to remove. Wavelength Range Setting . A single wavelength range is usually written as min:max or (min:max). For multiple non-overlapping ranges, write them as (min1:max1),(min2:max2) etc. - a comma-separated list of single wavelength ranges inside parentheses. The wavelengths are in Angstroms. ",
+    "url": "/SpectroForge/v0.0.8/configuration/slits-windows/#mosaic-windows-editor",
+    
+    "relUrl": "/configuration/slits-windows/#mosaic-windows-editor"
+  },"85": {
+    "doc": "Slits & Windows",
+    "title": "Slits & Windows",
+    "content": " ",
+    "url": "/SpectroForge/v0.0.8/configuration/slits-windows/",
+    
+    "relUrl": "/configuration/slits-windows/"
+  },"86": {
+    "doc": "Spectral Features",
+    "title": "Spectral Features",
+    "content": "Spectral features are named emission or absorption lines that are overlaid on the focal-plane plot as vertical marker lines. They help you verify that a key wavelength falls within a slit passband at the chosen grating angle. ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/",
+    
+    "relUrl": "/configuration/spectral-features/"
+  },"87": {
+    "doc": "Spectral Features",
+    "title": "Table of contents",
+    "content": ". | Opening the Editor | Feature Table Columns | Line Width | Editing | Tips | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#table-of-contents",
+    
+    "relUrl": "/configuration/spectral-features/#table-of-contents"
+  },"88": {
+    "doc": "Spectral Features",
+    "title": "Opening the Editor",
+    "content": "Click the Features chip below the mode summary. The editor opens as a draggable floating window. ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#opening-the-editor",
+    
+    "relUrl": "/configuration/spectral-features/#opening-the-editor"
+  },"89": {
+    "doc": "Spectral Features",
+    "title": "Feature Table Columns",
+    "content": "| Column | Description | . | Plot | Checkbox — uncheck to hide the line without deleting it | . | Name | Label displayed as an annotation on the plot | . | Wavelength | Line centre wavelength in Å (0.001 Å step) | . | Color | Line colour — click the swatch to open the colour picker, or type a hex value | . | Slit key | Name of the slit this feature belongs to. Leave blank to show on all slits | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#feature-table-columns",
+    
+    "relUrl": "/configuration/spectral-features/#feature-table-columns"
+  },"90": {
+    "doc": "Spectral Features",
+    "title": "Line Width",
+    "content": "The line width control in the editor header sets the stroke width for all feature lines (0.01 – 10, default 0.75). Adjust this to keep annotations readable at different PDF export DPI settings. ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#line-width",
+    
+    "relUrl": "/configuration/spectral-features/#line-width"
+  },"91": {
+    "doc": "Spectral Features",
+    "title": "Editing",
+    "content": ". | Click a cell to edit in place. | Click Add feature to append a new row. | Click ✕ on a row to remove a feature. | Toggle the Plot checkbox to temporarily suppress a line on the plot without losing its definition. | . ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#editing",
+    
+    "relUrl": "/configuration/spectral-features/#editing"
+  },"92": {
+    "doc": "Spectral Features",
+    "title": "Tips",
+    "content": "Name features with the ion and wavelength, e.g. OI 6300 — this label appears directly on the plot annotation. Use the Slit key column to assign a feature to one slit only. This is useful when the same wavelength falls in different orders for different slits. ",
+    "url": "/SpectroForge/v0.0.8/configuration/spectral-features/#tips",
+    
+    "relUrl": "/configuration/spectral-features/#tips"
+  },"93": {
+    "doc": "Straighten",
+    "title": "Straighten",
+    "content": "The Straighten view corrects curved spectral lines in a real detector image — a common effect in wide-field spectrographs where spectral lines bow across the detector. ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/",
+    
+    "relUrl": "/ui/straighten/"
+  },"94": {
+    "doc": "Straighten",
+    "title": "Table of contents",
+    "content": ". | TOC | . ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#table-of-contents",
+    
+    "relUrl": "/ui/straighten/#table-of-contents"
+  },"95": {
+    "doc": "Straighten",
+    "title": "Workflow summary",
+    "content": ". | Ensure your instrument layout has at least one mosaic window defined (see Slits &amp; Windows). | Switch to the Straighten view. | Load a calibration image. | Select a detector window. | Inspect and export the straightening map. | . ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#workflow-summary",
+    
+    "relUrl": "/ui/straighten/#workflow-summary"
+  },"96": {
+    "doc": "Straighten",
+    "title": "Left panel — Windows",
+    "content": "Available windows . One button appears per mosaic window defined in the current layout. Click a button to display the straightened image for that window in the central plot. Colormap . Choose the colormap used to display pixel intensities in the straightened output. Archive controls . | Button | Action | . | Export Straightener | Save the current straightening curve map as a .bin file | . | Load Straightener | Load a previously exported .bin map | . Exporting the map allows you to apply the same straightening to many images without repeating the calibration each time. ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#left-panel--windows",
+    
+    "relUrl": "/ui/straighten/#left-panel--windows"
+  },"97": {
+    "doc": "Straighten",
+    "title": "Right panel — Image",
+    "content": "Upload . Click Upload (or drag a PNG/JPEG onto the preview canvas) to load an image. The canvas shows a thumbnail scaled to fit within 400 × 280 px while preserving aspect ratio. ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#right-panel--image",
+    
+    "relUrl": "/ui/straighten/#right-panel--image"
+  },"98": {
+    "doc": "Straighten",
+    "title": "Central plot",
+    "content": "The main area shows the straightened image for the selected window as a 2-D heatmap: . | X-axis — Wavelength (nm), derived from the optical model. | Y-axis — Spatial position along the focal plane (mm). | Color — Raw pixel intensity. | . Hover for per-pixel wavelength, position, and intensity values. ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#central-plot",
+    
+    "relUrl": "/ui/straighten/#central-plot"
+  },"99": {
+    "doc": "Straighten",
+    "title": "Drag-n-Drop Support",
+    "content": "The straighten view supports drag-n-drop for loading calibration images. Try dragging a PNG/JPEG from your computer onto the image preview panel to load it! . ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#drag-n-drop-support",
+    
+    "relUrl": "/ui/straighten/#drag-n-drop-support"
+  },"100": {
+    "doc": "Straighten",
+    "title": "Troubleshooting",
+    "content": "Missing Mosaic Window . If a mosaic window is missing from the right panel, it indicates a complete order-overlap in the current layout. Make adjustments in the Layout view (e.g. adjust bandpasses) to resolve the overlap. Banding Artifacts . If a straightened image has banding artifacts, it indicates Y-axis splitting in the current layout. Meaning, multiple slits/orders are contributing different wavelengths to the same Y coordinates, and potentially indicates a layout design issue. Adjust the layout (e.g. adjust slit positions, mosaic window positions, grating γ (gamma) offset) to resolve the splitting. The wavelength axis is computed from the current instrument parameters. If the layout has not been rendered since the last parameter change, re-render in the Layout view first to ensure the calibration is up-to-date. ",
+    "url": "/SpectroForge/v0.0.8/ui/straighten/#troubleshooting",
+    
+    "relUrl": "/ui/straighten/#troubleshooting"
+  }
+}
